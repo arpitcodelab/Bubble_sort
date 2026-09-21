@@ -1,0 +1,79 @@
+:root {
+  /* Environment Void & Dark Backgrounds */
+  --bg-void: #05070B;
+  --bg-space: #070A10;
+  --bg-surface: #0C101A;
+  --bg-surface-elevated: #111726;
+  --bg-glass: rgba(12, 17, 28, 0.78);
+  --bg-glass-heavy: rgba(8, 11, 20, 0.90);
+  --bg-glass-active: rgba(20, 30, 50, 0.85);
+
+  /* Cyberpunk High-Tech Neon Palette */
+  --neon-cyan: #00F0FF;
+  --neon-cyan-glow: rgba(0, 240, 255, 0.45);
+  --neon-cyan-intense: rgba(0, 240, 255, 0.85);
+
+  --neon-orange: #FF7700;
+  --neon-orange-glow: rgba(255, 119, 0, 0.45);
+  --neon-orange-intense: rgba(255, 119, 0, 0.85);
+
+  --neon-yellow: #FFE600;
+  --neon-yellow-glow: rgba(255, 230, 0, 0.45);
+  --neon-yellow-intense: rgba(255, 230, 0, 0.85);
+
+  --neon-green: #00FF66;
+  --neon-green-glow: rgba(0, 255, 102, 0.45);
+  --neon-green-intense: rgba(0, 255, 102, 0.85);
+
+  --neon-blue: #0088FF;
+  --neon-blue-glow: rgba(0, 136, 255, 0.45);
+  --neon-blue-intense: rgba(0, 136, 255, 0.85);
+
+  --neon-violet: #A200FF;
+  --neon-violet-glow: rgba(162, 0, 255, 0.45);
+  --neon-violet-intense: rgba(162, 0, 255, 0.85);
+
+  --neon-magenta: #FF007F;
+  --neon-magenta-glow: rgba(255, 0, 127, 0.45);
+  --neon-magenta-intense: rgba(255, 0, 127, 0.85);
+
+  /* Hardware Metallic & Laser Accents */
+  --metal-border: rgba(0, 240, 255, 0.22);
+  --metal-border-bright: rgba(0, 240, 255, 0.65);
+  --metal-edge-highlight: rgba(255, 255, 255, 0.35);
+  --metal-surface: #141A29;
+
+  /* Typography */
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-tech: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Text Colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: #94A3B8;
+  --text-dim: #50617B;
+  --text-cyan: #00F0FF;
+  --text-gold: #FFD700;
+
+  /* Luminous Shadows and Glows */
+  --glow-cyan-sm: 0 0 10px rgba(0, 240, 255, 0.35);
+  --glow-cyan-md: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 40px rgba(0, 240, 255, 0.2);
+  --glow-cyan-lg: 0 0 35px rgba(0, 240, 255, 0.7), 0 0 70px rgba(0, 240, 255, 0.3);
+  
+  --shadow-glass: 0 16px 40px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  --shadow-tube: 0 12px 32px rgba(0, 0, 0, 0.85), inset 0 0 15px rgba(0, 240, 255, 0.08);
+
+  /* Spacing & Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Motion & Timings */
+  --ease-cyber: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 280ms;
+  --duration-slow: 450ms;
+}
