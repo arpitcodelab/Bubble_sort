@@ -1,11 +1,11 @@
 import React from 'react';
-import { X, Volume2, VolumeX, Smartphone, Eye, Sparkles, Trash2, HelpCircle } from 'lucide-react';
+import { X, Volume2, VolumeX, Smartphone } from 'lucide-react';
 import { GameSettings } from '../../core/types';
 
 interface SettingsSheetProps {
   settings: GameSettings;
   onUpdateSettings: (settings: Partial<GameSettings>) => void;
-  onResetProgress: () => void;
+  onResetProgress?: () => void;
   onOpenHowToPlay?: () => void;
   onClose: () => void;
 }
@@ -13,8 +13,6 @@ interface SettingsSheetProps {
 export const SettingsSheet: React.FC<SettingsSheetProps> = ({
   settings,
   onUpdateSettings,
-  onResetProgress,
-  onOpenHowToPlay,
   onClose,
 }) => {
   return (
@@ -76,7 +74,7 @@ export const SettingsSheet: React.FC<SettingsSheetProps> = ({
           </button>
         </div>
 
-        {/* 2x2 Cyber Quick-Toggle Icon Grid */}
+        {/* Quick-Toggle Icon Grid: Audio & Haptics */}
         <div
           style={{
             display: 'grid',
@@ -133,84 +131,7 @@ export const SettingsSheet: React.FC<SettingsSheetProps> = ({
               HAPTICS: {settings.hapticsEnabled ? 'ON' : 'OFF'}
             </span>
           </button>
-
-          {/* Holographic Runes (Colorblind) */}
-          <button
-            className="cyber-btn"
-            onClick={() => onUpdateSettings({ colorBlindMode: !settings.colorBlindMode })}
-            style={{
-              padding: '16px 12px',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              gap: '8px',
-              background: settings.colorBlindMode
-                ? 'linear-gradient(180deg, rgba(0, 240, 255, 0.18) 0%, rgba(0, 120, 200, 0.25) 100%)'
-                : 'rgba(255, 255, 255, 0.03)',
-              borderColor: settings.colorBlindMode ? 'var(--neon-cyan)' : 'var(--metal-border)',
-              boxShadow: settings.colorBlindMode ? '0 0 14px var(--neon-cyan-glow)' : 'none',
-            }}
-          >
-            <Eye size={24} color={settings.colorBlindMode ? 'var(--neon-cyan)' : 'var(--text-dim)'} />
-            <span style={{ fontSize: '0.85rem', color: settings.colorBlindMode ? '#FFFFFF' : 'var(--text-dim)' }}>
-              RUNES: {settings.colorBlindMode ? 'ON' : 'OFF'}
-            </span>
-          </button>
-
-          {/* Reduced Motion */}
-          <button
-            className="cyber-btn"
-            onClick={() => onUpdateSettings({ reducedMotion: !settings.reducedMotion })}
-            style={{
-              padding: '16px 12px',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              gap: '8px',
-              background: settings.reducedMotion
-                ? 'linear-gradient(180deg, rgba(0, 240, 255, 0.18) 0%, rgba(0, 120, 200, 0.25) 100%)'
-                : 'rgba(255, 255, 255, 0.03)',
-              borderColor: settings.reducedMotion ? 'var(--neon-cyan)' : 'var(--metal-border)',
-              boxShadow: settings.reducedMotion ? '0 0 14px var(--neon-cyan-glow)' : 'none',
-            }}
-          >
-            <Sparkles size={24} color={settings.reducedMotion ? 'var(--neon-cyan)' : 'var(--text-dim)'} />
-            <span style={{ fontSize: '0.85rem', color: settings.reducedMotion ? '#FFFFFF' : 'var(--text-dim)' }}>
-              MOTION: {settings.reducedMotion ? 'REDUCED' : 'FULL'}
-            </span>
-          </button>
         </div>
-
-        {/* How to Play Quick Link */}
-        {onOpenHowToPlay && (
-          <button
-            className="cyber-btn"
-            onClick={() => {
-              onClose();
-              onOpenHowToPlay();
-            }}
-            style={{ width: '100%', justifyContent: 'center', gap: '8px' }}
-          >
-            <HelpCircle size={18} color="var(--neon-cyan)" />
-            <span>HOW TO PLAY PROTOCOLS</span>
-          </button>
-        )}
-
-        {/* Purge Progress Memory */}
-        <button
-          className="cyber-btn"
-          onClick={onResetProgress}
-          style={{
-            borderColor: 'rgba(255, 0, 127, 0.4)',
-            color: 'var(--neon-magenta)',
-            justifyContent: 'center',
-            fontSize: '0.9rem',
-            padding: '10px',
-          }}
-        >
-          <Trash2 size={16} />
-          <span>RESET GAME PROGRESS</span>
-        </button>
 
         {/* Save / Close */}
         <button
