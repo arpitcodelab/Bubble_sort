@@ -1,9 +1,0 @@
-{
-  "project_name": "bubble-sort-cyberpunk",
-  "version": "1.0.0",
-  "style": "cyberpunk-future-tech",
-  "workflow": {
-    "auto_verify": true,
-    "require_plan_approval": true
-  }
-}
